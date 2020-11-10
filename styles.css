@@ -6,7 +6,7 @@
 }
 
 section {
-  margin: 80px 175px;
+  margin: 80px 140px;
   font-size: 13px;
   display: flex;
 }
@@ -17,11 +17,20 @@ section {
 }
 
 .grad-name {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  display: inline;
   margin-bottom: 10px;
+}
+
+.title p {
+  background-color: inherit;
+  line-height: 0.2;
+}
+
+.title {
+  background-color: inherit;
+  flex: wrap;
+  /* If push comes to shove, relative */
+  position: relative;
 }
 
 .description {
@@ -54,6 +63,7 @@ img {
 }
 
 #left-container {
+  height: 100%;
   width: 75%;
   margin: 0;
 }
@@ -113,4 +123,107 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+  * {
+    background-color: rgb(208, 220, 221);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+
+  section {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-size: 13px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  p {
+    background-color: inherit;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .bubble {
+    padding: 30px;
+    margin: 10px 2px;
+    max-width: 80%;
+  }
+
+  .description {
+    background-color: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  #test-top-1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 81%);
+    border-radius: 10px;
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
+  #left-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  #right-container {
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #top-sectional {
+    flex-direction: column;
+  }
+
+  #bottom-sectional {
+    flex-direction: column;
+  }
+
+  #test-top-1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 81%);
+    border-radius: 10px;
+    width: 335px;
+  }
+
+  #test-top-2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 81%);
+    border-radius: 10px;
+    width: 335px;
+  }
+
+  #test-bottom-1 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    border-radius: 10px;
+    width: 335px;
+  }
+
+  #test-bottom-2 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 81%);
+    border-radius: 10px;
+    width: 335px;
+  }
+
+  #test-right-side {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+    border-radius: 10px;
+    width: 335px;
+    flex-wrap: wrap;
+  }
+
+  .attribution {
+    display: none;
+  }
 }
